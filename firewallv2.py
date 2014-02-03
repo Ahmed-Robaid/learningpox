@@ -2,8 +2,11 @@
 
 #author -durga
 #controller - pox
-#The below L2 firewall controllerinserts flow table entries as soon as a connectionUp event is triggered. v3 tries to make the firewall appication reactive, by inserting the flow mod only during a packetIn event, but since the l2 switching appliation too seems to be processing the packet, an buffer already in use related error is thrown at the user. 
+#The below L2 firewall controllerinserts flow table entries as soon as a connectionUp event is triggered. 
+#v3 tries to make the firewall appication reactive, by inserting the flow mod only during a packetIn event, 
+#but since the l2 switching appliation too seems to be processing the packet, an buffer already in use related error is thrown at the user. 
 #To circumvent the issue, the below code inserts higher priority flowtable entry as soon as a connection is made, avoiding the contention of buffer in total.
+# this peice of code needs to be run along with the switching code (l2 switching ) 
  ##################################
 # generic info
 # all mentioned events ex:ConnectionUp and PacketIn can be found in pox/openflow/__init__.py
