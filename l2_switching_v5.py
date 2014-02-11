@@ -107,7 +107,7 @@ class L2switch(object):
                         elif dstport != event.port : #else, insert a flow table entry
                                 msg.actions.append(of.ofp_action_output(port = dstport))
                 #               log.debug ("%s"%msg)
-                #
+                
                 self.sendFlowMod(msg,event)
 
 
