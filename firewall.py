@@ -2,7 +2,7 @@
 
 #author -durga
 #controller - pox
-#date: 13 feb
+
 #The  controller inserts flow table entries based on switching rules
 # following code emulates basic source-mac address learning,forwarding
 #and filtering mechanisms found on switches
